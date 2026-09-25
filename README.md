@@ -27,9 +27,13 @@ Features an interactive food tray with direct **0% commission WhatsApp order rou
 ## ✨ Key Features
 
 * **⚡ 0% Commission Direct WhatsApp Checkout:** Customers curate their tray (pizzas, smash burgers, sides, sundaes) and submit orders directly to Bella's WhatsApp counter with auto-calculated subtotals and itemized breakdown slips.
+  
 * **🕒 Dynamic PKT Operating Hours Engine:** Client-side schedule logic synced to Pakistan Standard Time (UTC+5). Displays live `Open Now` or `Opens at 9:00 AM` status badges for late-night GT Road highway travelers (Mon till 1:00 AM, Tue–Sun till 2:00 AM).
+  
 * **📱 Mobile-First Native App Experience:** Fixed bottom navigation bar for quick access to dialing, category switching, cart drawer, and WhatsApp triggers.
+  
 * **📍 GT Road Navigation & Call Integration:** 1-tap Google Maps redirection for Akhtar Nawaz Khan Plaza (Darvesh, Haripur) and click-to-call direct dialer.
+  
 * **🔌 Dual-Mode Architecture:** Fully functional as a standalone static web app on GitHub Pages, with optional FastAPI + SQLite backend endpoints (`/api/orders`, `/api/contact`) for local desktop deployment.
 
 ---

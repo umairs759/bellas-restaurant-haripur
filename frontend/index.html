@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella's Haripur | Fast Food, Sizzling Pizzas, Gourmet Burgers & Shakes</title>
+  <meta name="description" content="Welcome to Bella's Haripur on Main GT Road, Akhtar Nawaz Khan Plaza. Famous for Cheesy Pizzas, Sizzling Burgers, Loaded Fries, and handcrafted Strawberry & Pistachio Sundaes. Open late night till 2:00 AM.">
+  <meta name="keywords" content="Bella's Haripur, fast food Haripur, pizza Haripur, burgers Haripur, best restaurant Haripur, GT Road Haripur restaurants, sundae ice cream Haripur">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts: Plus Jakarta Sans & Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#e11d48',
+              crimson: '#be123c',
+              dark: '#0a0a0c',
+              darker: '#060608',
+              card: '#121318',
+              cardBorder: '#232530',
+              amber: '#f59e0b',
+              gold: '#fbbf24',
+              orange: '#f97316'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Oswald"', 'sans-serif']
+          },
+          boxShadow: {
+            'glow-red': '0 0 25px -5px rgba(225, 29, 72, 0.45)',
+            'glow-amber': '0 0 25px -5px rgba(245, 158, 11, 0.35)',
+            'glow-card': '0 10px 30px -10px rgba(0, 0, 0, 0.8)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0a0c;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #27272a;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e11d48;
+    }
+
+    /* Glassmorphism helpers */
+    .glass-nav {
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .glass-card {
+      background: rgba(18, 19, 24, 0.78);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .badge-shimmer {
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+  </style>
+</head>
+
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-red selection:text-white pb-24 lg:pb-0">
+
+  <div class="bg-gradient-to-r from-brand-crimson via-brand-red to-brand-orange text-white text-xs font-semibold py-2 px-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2 overflow-hidden text-ellipsis whitespace-nowrap">
+        <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-black/30 uppercase tracking-wider">Haripur GT Road</span>
+        <span>🍕 Craving late night fast food? Serving hot crispy crunch till 2:00 AM daily!</span>
+      </div>
+      <div class="hidden sm:flex items-center space-x-4 text-xs">
+        <a href="tel:+923361131166" class="hover:underline flex items-center gap-1">
+          <i class="fa-solid fa-phone text-[10px]"></i> 0336-1131166
+        </a>
+        <span class="opacity-50">|</span>
+        <span id="liveStatusTicker" class="flex items-center gap-1 font-bold text-amber-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Checking Open Hours...
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky top-[33px] z-40 w-full glass-nav border-b border-white/10 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-red to-brand-amber flex items-center justify-center text-white font-display font-extrabold text-2xl shadow-glow-red group-hover:scale-105 transition-transform duration-300">
+          B
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-display font-black tracking-wider text-2xl text-white group-hover:text-brand-amber transition-colors">BELLA'S</span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-brand-red text-white font-bold tracking-widest uppercase">FAST FOOD</span>
+          </div>
+          <p class="text-[11px] text-gray-400 -mt-1 font-medium">Main GT Road • Haripur</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium">
+        <a href="#hero" class="text-gray-200 hover:text-brand-amber transition-colors">Home</a>
+        <a href="#menu" class="text-gray-200 hover:text-brand-amber transition-colors">Menu</a>
+        <a href="#desserts" class="text-gray-200 hover:text-brand-amber transition-colors flex items-center gap-1.5">
+          <span>Sundaes & Shakes</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded-full bg-brand-amber/20 text-brand-amber font-bold">Special</span>
+        </a>
+        <a href="#about" class="text-gray-200 hover:text-brand-amber transition-colors">Our Vibe</a>
+        <a href="#reviews" class="text-gray-200 hover:text-brand-amber transition-colors">Reviews</a>
+        <a href="#location" class="text-gray-200 hover:text-brand-amber transition-colors">Visit & Hours</a>
+      </nav>
+
+      <!-- Right CTAs: Direct Call & Interactive Cart Button -->
+      <div class="flex items-center space-x-3">
+        <!-- Direct Phone Link -->
+        <a href="tel:+923361131166" class="hidden sm:inline-flex items-center gap-2 bg-brand-card hover:bg-brand-cardBorder text-gray-200 hover:text-white px-3.5 py-2 rounded-xl text-xs font-semibold border border-white/10 transition-all">
+          <i class="fa-solid fa-phone-volume text-brand-red"></i>
+          <span>0336 1131166</span>
+        </a>
+
+        <!-- Cart Drawer Opener -->
+        <button onclick="toggleCartDrawer(true)" class="relative bg-gradient-to-r from-brand-red to-brand-crimson hover:from-brand-crimson hover:to-brand-red text-white px-4 py-2 rounded-xl text-xs font-bold tracking-wide shadow-glow-red flex items-center gap-2 transition-all hover:scale-105 active:scale-95">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="hidden sm:inline">My Tray</span>
+          <span id="headerCartCount" class="w-5 h-5 rounded-full bg-white text-brand-red font-black text-xs flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobileMenuBtn" onclick="toggleMobileNav()" class="md:hidden text-gray-300 hover:text-white p-2 text-xl focus:outline-none" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" id="menuHamburgerIcon"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <div id="mobileNavMenu" class="hidden md:hidden glass-nav border-b border-white/10 px-5 pt-3 pb-6 space-y-3 transition-all">
+    <a href="#hero" onclick="toggleMobileNav()" class="block py-2 text-base font-semibold text-gray-200 hover:text-brand-amber border-b border-white/5">Home</a>
+    <a href="#menu" onclick="toggleMobileNav()" class="block py-2 text-base font-semibold text-gray-200 hover:text-brand-amber border-b border-white/5 flex items-center justify-between">
+      <span>Full Menu</span>
+      <span class="text-xs bg-brand-red/30 text-brand-red px-2 py-0.5 rounded-full">Hot</span>
+    </a>
+    <a href="#desserts" onclick="toggleMobileNav()" class="block py-2 text-base font-semibold text-gray-200 hover:text-brand-amber border-b border-white/5">Famous Shakes & Sundaes</a>
+    <a href="#about" onclick="toggleMobileNav()" class="block py-2 text-base font-semibold text-gray-200 hover:text-brand-amber border-b border-white/5">About Bella's</a>
+    <a href="#reviews" onclick="toggleMobileNav()" class="block py-2 text-base font-semibold text-gray-200 hover:text-brand-amber border-b border-white/5">Reviews (4.4 ★)</a>
+    <a href="#location" onclick="toggleMobileNav()" class="block py-2 text-base font-semibold text-gray-200 hover:text-brand-amber">Directions & Timings</a>
+    <div class="pt-2 flex flex-col gap-2">
+      <a href="tel:+923361131166" class="w-full text-center py-2.5 rounded-xl bg-brand-card text-sm font-bold text-white border border-white/10 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-phone text-brand-red"></i> Call 0336 1131166
+      </a>
+      <a href="https://wa.me/923361131166?text=Hi%20Bella's%20Haripur,%20I%20would%20like%20to%20place%20an%20order!" target="_blank" class="w-full text-center py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-sm font-bold text-white flex items-center justify-center gap-2">
+        <i class="fa-brands fa-whatsapp text-lg"></i> Direct WhatsApp Order
+      </a>
+    </div>
+  </div>
+
+  <section id="hero" class="relative pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden">
+    <!-- Atmospheric Ambient Glows -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-red/20 rounded-full blur-[128px] pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-32 w-96 h-96 bg-brand-amber/15 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Punchy Copywriting & Conversion CTAs -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Dynamic Time & Reputation Badges -->
+          <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+            <span id="heroOpenBadge" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-emerald-950/80 border border-emerald-500/40 text-emerald-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>OPEN NOW • KITCHEN COOKING</span>
+            </span>
+
+            <a href="https://maps.google.com/?cid=5048793112688946254" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-brand-card border border-white/10 hover:border-amber-400/40 transition-colors text-gray-200">
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <span class="font-extrabold text-white">4.4</span>
+              <span class="text-gray-400">(623+ Google Reviews)</span>
+            </a>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight uppercase leading-[1.08]">
+            Haripur's Go-To For <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-brand-red">
+              Late-Night Cravings
+            </span> & Sizzling Fast Food
+          </h1>
+
+          <!-- Localized Subtitle -->
+          <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Located right at <strong class="text-white">Akhtar Nawaz Khan Plaza, Main GT Road</strong> (near Sabzi Mandi & Nishat Mandi Mor). Fresh stone-baked cheesy pizzas, gourmet crispy crunch burgers, loaded masala fries, and our signature ice cream sundaes.
+          </p>
+
+          <!-- Key Haripur Selling Points -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1 text-left max-w-lg mx-auto lg:mx-0">
+            <div class="bg-brand-card/90 border border-white/5 p-2.5 rounded-xl flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-red-500/10 text-brand-red flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-fire text-sm"></i>
+              </div>
+              <div>
+                <p class="text-[11px] text-gray-400">Cheese Pull</p>
+                <p class="text-xs font-bold text-white">Fresh Stone-Baked</p>
+              </div>
+            </div>
+
+            <div class="bg-brand-card/90 border border-white/5 p-2.5 rounded-xl flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-brand-amber flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-clock text-sm"></i>
+              </div>
+              <div>
+                <p class="text-[11px] text-gray-400">Night Pitstop</p>
+                <p class="text-xs font-bold text-white">Open Till 2:00 AM</p>
+              </div>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1 bg-brand-card/90 border border-white/5 p-2.5 rounded-xl flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-users text-sm"></i>
+              </div>
+              <div>
+                <p class="text-[11px] text-gray-400">Dine-In Space</p>
+                <p class="text-xs font-bold text-white">Spacious Family Hall</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- High-Converting Action CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+            <a href="https://wa.me/923361131166?text=Hi%20Bella's%20Haripur!%20I'd%20like%20to%20order%20food%20for%20pickup/delivery." target="_blank" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm tracking-wide shadow-lg hover:shadow-emerald-500/30 transition-all flex items-center justify-center gap-3 transform hover:-translate-y-0.5 active:translate-y-0">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Instant WhatsApp Order</span>
+            </a>
+
+            <a href="#menu" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-gradient-to-r from-brand-red to-brand-crimson hover:from-brand-crimson hover:to-brand-red text-white font-bold text-sm tracking-wide shadow-glow-red transition-all flex items-center justify-center gap-3 transform hover:-translate-y-0.5 active:translate-y-0">
+              <i class="fa-solid fa-utensils"></i>
+              <span>Explore Menu & Prices</span>
+            </a>
+
+            <a href="tel:+923361131166" class="w-full sm:w-auto px-5 py-4 rounded-2xl bg-brand-card hover:bg-brand-cardBorder border border-white/10 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-phone text-brand-red"></i>
+              <span>Call Us</span>
+            </a>
+          </div>
+
+          <!-- Prompt Local Notice -->
+          <p class="text-xs text-gray-400 flex items-center justify-center lg:justify-start gap-2 pt-1">
+            <i class="fa-solid fa-location-dot text-brand-amber"></i>
+            <span>Akhtar Nawaz Khan Plaza, Main GT Road, Haripur</span>
+          </p>
+
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <!-- Main Hero Food Showcase Card -->
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Background Radial Glow -->
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-red/30 to-brand-amber/30 rounded-3xl blur-2xl transform -rotate-3 scale-95"></div>
+            
+            <div class="relative glass-card rounded-3xl p-3 border border-white/15 overflow-hidden shadow-2xl">
+              <div class="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-square bg-neutral-900 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop" 
+                  alt="Bella's Haripur Loaded Cheesy Pizza with golden crust" 
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=Bella\'s+Loaded+Pizza'"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                
+                <!-- On-Image Badge -->
+                <div class="absolute top-4 left-4 bg-brand-red text-white text-xs font-black uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                  <i class="fa-solid fa-fire animate-pulse text-amber-300"></i> Fresh Out of the Oven
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-4 text-left">
+                  <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Customer Favorite</span>
+                  <h3 class="text-xl sm:text-2xl font-display font-bold text-white leading-tight">Bella's Signature Cheese Overload Pizza</h3>
+                  <p class="text-xs text-gray-300 line-clamp-1 mt-0.5">Golden garlic crust, 100% mozzarella pull & tandoori spiced chicken chunks</p>
+                </div>
+              </div>
+
+              <!-- Floating Mini Highlight Cards -->
+              <div class="grid grid-cols-2 gap-2 mt-3">
+                <div class="bg-black/60 rounded-xl p-2.5 border border-white/5 flex items-center gap-3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=300&auto=format&fit=crop" 
+                    alt="Bella's Crispy Burger" 
+                    class="w-12 h-12 rounded-lg object-cover"
+                    onerror="this.src='https://placehold.co/120x120/1e293b/ffffff?text=Burger'"
+                  >
+                  <div class="overflow-hidden">
+                    <p class="text-[10px] text-amber-400 font-bold uppercase">Grilled & Crispy</p>
+                    <p class="text-xs font-bold text-white truncate">Crunch Burgers</p>
+                    <p class="text-[11px] text-gray-400">From PKR 620</p>
+                  </div>
+                </div>
+
+                <div class="bg-black/60 rounded-xl p-2.5 border border-white/5 flex items-center gap-3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=300&auto=format&fit=crop" 
+                    alt="Bella's Strawberry Shake & Sundae" 
+                    class="w-12 h-12 rounded-lg object-cover"
+                    onerror="this.src='https://placehold.co/120x120/1e293b/ffffff?text=Shake'"
+                  >
+                  <div class="overflow-hidden">
+                    <p class="text-[10px] text-pink-400 font-bold uppercase">Dessert Bar</p>
+                    <p class="text-xs font-bold text-white truncate">Pistachio Sundaes</p>
+                    <p class="text-[11px] text-gray-400">From PKR 350</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-white/10 bg-brand-darker py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="flex flex-col items-center">
+          <div class="text-brand-amber text-2xl mb-1"><i class="fa-solid fa-award"></i></div>
+          <div class="text-lg font-display font-bold text-white">4.4 Star Rated</div>
+          <div class="text-xs text-gray-400">623+ Verified Google Reviews</div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="text-brand-red text-2xl mb-1"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="text-lg font-display font-bold text-white">100% Fresh & Halal</div>
+          <div class="text-xs text-gray-400">Daily sourced poultry & veggies</div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="text-emerald-400 text-2xl mb-1"><i class="fa-solid fa-bolt"></i></div>
+          <div class="text-lg font-display font-bold text-white">Hot & Quick Service</div>
+          <div class="text-xs text-gray-400">Dine-in, Car Takeaway, Delivery</div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="text-brand-orange text-2xl mb-1"><i class="fa-solid fa-moon"></i></div>
+          <div class="text-lg font-display font-bold text-white">Late Night 2:00 AM</div>
+          <div class="text-xs text-gray-400">GT Road's Favorite Night Stop</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-bold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-utensils"></i> Fast Food Specialties
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight uppercase">
+          The Bella's Menu Experience
+        </h2>
+        <p class="text-gray-400 text-sm sm:text-base mt-2">
+          Comfort food classics, stone-baked pizzas loaded to the rim, and signature creamy sundaes.
+        </p>
+        <!-- Notice badge regarding placeholder prices -->
+        <div class="mt-3 inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 rounded-lg text-amber-300 text-xs">
+          <i class="fa-solid fa-circle-info mr-1"></i> [SAMPLE DATA — Prices and items can be customized by the owner]
+        </div>
+      </div>
+
+      <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-4 no-scrollbar mb-8">
+        <button onclick="filterMenu('all')" class="menu-tab-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-brand-red text-white shadow-glow-red" data-category="all">
+          <i class="fa-solid fa-fire mr-1.5"></i> All Dishes
+        </button>
+        <button onclick="filterMenu('pizza')" class="menu-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-brand-card hover:bg-brand-cardBorder text-gray-300 hover:text-white border border-white/5" data-category="pizza">
+          🍕 Signature Pizzas
+        </button>
+        <button onclick="filterMenu('burgers')" class="menu-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-brand-card hover:bg-brand-cardBorder text-gray-300 hover:text-white border border-white/5" data-category="burgers">
+          🍔 Sizzling Burgers
+        </button>
+        <button onclick="filterMenu('desserts')" class="menu-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-brand-card hover:bg-brand-cardBorder text-gray-300 hover:text-white border border-white/5" data-category="desserts">
+          🍨 Sundaes & Shakes
+        </button>
+        <button onclick="filterMenu('sides')" class="menu-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-brand-card hover:bg-brand-cardBorder text-gray-300 hover:text-white border border-white/5" data-category="sides">
+          🍟 Sides & Bites
+        </button>
+        <button onclick="filterMenu('drinks')" class="menu-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-brand-card hover:bg-brand-cardBorder text-gray-300 hover:text-white border border-white/5" data-category="drinks">
+          🥤 Refreshers & Drinks
+        </button>
+      </div>
+
+      <div id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <!-- Item 1: Cheese Lover's Pizza -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="pizza">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600&auto=format&fit=crop" alt="Cheese Lover's Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Cheese+Pizza'">
+            <span class="absolute top-3 left-3 bg-brand-red text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow">Haripur Bestseller</span>
+            <span class="absolute bottom-2 right-2 bg-black/80 backdrop-blur-md text-amber-400 text-xs font-bold px-2 py-0.5 rounded">12" Large</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Cheese Lover's Pizza</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 1,150</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Extra layer of pure mozzarella, herb-infused Italian marinara, and garlic-brushed hand-stretched crust.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Cheese Lover\'s Pizza', 1150, 'pizza')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Grilled Crispy Chicken Burger -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="burgers">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop" alt="Grilled Crispy Chicken Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Chicken+Burger'">
+            <span class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow">Chef's Special</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Crispy Crunch Burger</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 620</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Golden fried spicy fillet, garlic-mayo spread, crisp iceberg lettuce, and melted cheese on a toasted brioche bun.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Crispy Crunch Burger', 620, 'burgers')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Bella's Strawberry Ice Cream Shake -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="desserts">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=600&auto=format&fit=crop" alt="Strawberry Ice Cream Shake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Strawberry+Shake'">
+            <span class="absolute top-3 left-3 bg-pink-500 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow">Iconic Dessert</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Strawberry Ice Cream Shake</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 430</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Bella's famous recipe: rich homemade strawberry ice cream, whole chilled milk, swirl of whipped cream and berries.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Strawberry Ice Cream Shake', 430, 'desserts')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Pistachio Sundae -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="desserts">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=600&auto=format&fit=crop" alt="Pistachio Sundae" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Pistachio+Sundae'">
+            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow">House Classic</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Pistachio Royale Sundae</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 390</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Silky pistachio gelato scoops crowned with roasted crushed pistas, cream wafer, and subtle cardamom drizzle.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Pistachio Royale Sundae', 390, 'desserts')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Bella's Hot Fudge Vanilla Sundae -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="desserts">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=600&auto=format&fit=crop" alt="Vanilla Sundae" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Vanilla+Sundae'">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Vanilla Fudge Sundae</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 350</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Double scoop Madagascar vanilla cream drizzled with warm Belgian hot chocolate fudge and cashew crunch.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Vanilla Fudge Sundae', 350, 'desserts')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Bella's Double Beef Smash Burger -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="burgers">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=600&auto=format&fit=crop" alt="Smash Beef Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Beef+Burger'">
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow">Heavyweight</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Double Beef Smash</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 750</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Two smashed beef patties, caramelized onions, double cheddar, and tangy house secret sauce on buttery buns.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Double Beef Smash', 750, 'burgers')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7: Loaded Masala & Cheesy Fries -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="sides">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?q=80&w=600&auto=format&fit=crop" alt="Loaded Masala Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Loaded+Fries'">
+            <span class="absolute top-3 left-3 bg-brand-orange text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow">Hot Pick</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Loaded Masala Fries</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 490</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Jumbo crinkle-cut fries smothered in warm cheese sauce, diced grilled chicken, jalapeños & signature Haripur masala.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Loaded Masala Fries', 490, 'sides')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8: Crispy Hot Wings (6 Pcs) -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="sides">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=600&auto=format&fit=crop" alt="Crispy Chicken Wings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Wings'">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Crispy Hot Wings</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 680</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Crispy hand-breaded chicken wings coated in spicy pepper batter, served with ranch dipping sauce.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Crispy Hot Wings (6 Pcs)', 680, 'sides')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9: Chicken Tikka Supreme Pizza -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="pizza">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop" alt="Chicken Tikka Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Tikka+Pizza'">
+            <span class="absolute top-3 left-3 bg-brand-red text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow">Local Legend</span>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Tikka Supreme Pizza</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 1,250</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Smoky tandoori chicken tikka chunks, capsicum, red onions, black olives, mozzarella, and house herbs.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Tikka Supreme Pizza', 1250, 'pizza')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10: Chocolate Fudge Thick Shake -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="desserts">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?q=80&w=600&auto=format&fit=crop" alt="Chocolate Fudge Shake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Chocolate+Shake'">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Chocolate Fudge Shake</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 450</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Velvety chocolate fudge blended with dairy ice cream, topped with chocolate chips and cocoa drizzle.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Chocolate Fudge Shake', 450, 'desserts')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 11: Fresh Mint Lemonade -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="drinks">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600&auto=format&fit=crop" alt="Mint Lemonade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Fresh+Lime'">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Fresh Mint Margarita</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 250</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Hand-crushed garden mint, fresh lime juice, black salt, and sparkling soda. The ultimate refresher.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Fresh Mint Margarita', 250, 'drinks')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 12: Garlic Butter Bread Sticks -->
+        <div class="menu-item-card glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-brand-red/40 transition-all duration-300 flex flex-col group shadow-lg" data-category="sides">
+          <div class="relative h-48 overflow-hidden bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?q=80&w=600&auto=format&fit=crop" alt="Garlic Bread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Garlic+Bread'">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Garlic Herb Bread</h3>
+                <span class="font-bold text-amber-400 text-base whitespace-nowrap">PKR 320</span>
+              </div>
+              <p class="text-xs text-gray-400 mt-1.5 leading-relaxed">
+                Four warm baguette slices toasted with garlic butter, dried oregano, and sprinkled parmesan.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between">
+              <span class="text-[11px] text-gray-500">[SAMPLE DATA]</span>
+              <button onclick="addToCart('Garlic Herb Bread', 320, 'sides')" class="bg-brand-red hover:bg-brand-crimson active:scale-95 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i> Add to Tray
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="desserts" class="py-16 bg-gradient-to-b from-brand-dark to-brand-cardBorder/30 relative border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-brand-red/20 shadow-2xl relative overflow-hidden">
+        <!-- Accent Glow -->
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-pink-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-6 space-y-4">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-pink-500/20 text-pink-400 border border-pink-500/30 uppercase tracking-wider">
+              🍨 Haripur's Late Night Sweet Tooth
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white uppercase tracking-tight">
+              Why People Drive From Mandi Mor Just For Our Sundaes
+            </h2>
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+              At Bella's, dessert isn't an afterthought. Our <strong class="text-white">Pistachio Royale</strong> and thick <strong class="text-white">Strawberry Ice Cream Shakes</strong> are prepared with velvety dairy milk and real nuts — the perfect sweet ending after a spicy pizza or late night road trip on GT Road.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="bg-black/40 rounded-xl p-3 border border-white/5">
+                <div class="text-amber-400 text-xs font-bold uppercase"><i class="fa-solid fa-star mr-1"></i> Fan Favorite</div>
+                <h4 class="font-bold text-white text-sm">Pistachio Gelato Sundae</h4>
+                <p class="text-xs text-gray-400 mt-0.5">PKR 390 • Double scoop with crushed nuts</p>
+              </div>
+              <div class="bg-black/40 rounded-xl p-3 border border-white/5">
+                <div class="text-pink-400 text-xs font-bold uppercase"><i class="fa-solid fa-heart mr-1"></i> Handcrafted</div>
+                <h4 class="font-bold text-white text-sm">Thick Strawberry Shake</h4>
+                <p class="text-xs text-gray-400 mt-0.5">PKR 430 • Creamy blended dairy bliss</p>
+              </div>
+            </div>
+
+            <div class="pt-3">
+              <a href="#menu" onclick="filterMenu('desserts')" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-600 to-brand-red text-white px-6 py-3 rounded-xl text-xs font-bold hover:opacity-95 transition-all shadow-md">
+                <span>View All Sweet Delights</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+            <div class="space-y-4">
+              <div class="rounded-2xl overflow-hidden h-44 sm:h-52 bg-neutral-900 border border-white/10 group">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=500&auto=format&fit=crop" alt="Bella's Haripur Pistachio Sundae" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/222/fff?text=Pistachio+Sundae'">
+              </div>
+              <div class="rounded-2xl overflow-hidden h-36 sm:h-40 bg-neutral-900 border border-white/10 group">
+                <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=500&auto=format&fit=crop" alt="Bella's Vanilla Fudge Sundae" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/222/fff?text=Vanilla+Sundae'">
+              </div>
+            </div>
+            <div class="space-y-4 pt-6">
+              <div class="rounded-2xl overflow-hidden h-36 sm:h-40 bg-neutral-900 border border-white/10 group">
+                <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=500&auto=format&fit=crop" alt="Bella's Strawberry Shake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/222/fff?text=Strawberry+Shake'">
+              </div>
+              <div class="rounded-2xl overflow-hidden h-44 sm:h-52 bg-neutral-900 border border-white/10 group">
+                <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?q=80&w=500&auto=format&fit=crop" alt="Bella's Chocolate Thick Shake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/222/fff?text=Chocolate+Sundae'">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 relative order-2 lg:order-1">
+          <div class="relative mx-auto max-w-lg">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4">
+                <div class="rounded-2xl overflow-hidden h-48 border border-white/10 bg-neutral-900 group">
+                  <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&auto=format&fit=crop" alt="Bella's Haripur Dining Room Ambiance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Family+Dining+Hall'">
+                </div>
+                <div class="rounded-2xl overflow-hidden h-60 border border-white/10 bg-neutral-900 group">
+                  <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop" alt="Bella's Restaurant Seating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Restaurant+Vibe'">
+                </div>
+              </div>
+
+              <div class="space-y-4 pt-8">
+                <div class="rounded-2xl overflow-hidden h-60 border border-white/10 bg-neutral-900 group">
+                  <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=600&auto=format&fit=crop" alt="Fresh Fast Food Preparation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222/fff?text=Kitchen+Prep'">
+                </div>
+                <div class="bg-gradient-to-br from-brand-red to-brand-crimson rounded-2xl p-5 text-white flex flex-col justify-center shadow-glow-red">
+                  <span class="text-3xl font-display font-black">623+</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-amber-200">Local Foodie Reviews</span>
+                  <p class="text-[11px] text-white/80 mt-1">Haripur's cherished destination for family dinners and midnight snacks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Authentic Story -->
+        <div class="lg:col-span-6 space-y-6 order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-map-pin"></i> Haripur's Pride on Main GT Road
+          </div>
+          
+          <h2 class="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight uppercase leading-tight">
+            More Than Just Fast Food — It’s Haripur’s Gathering Spot
+          </h2>
+
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+            Conveniently situated at <strong class="text-white">Akhtar Nawaz Khan Plaza near Sabzi Mandi</strong> (right opposite Nishat Mandi Mor), Bella’s was built to answer one simple question: <em>"Where can Haripur families and late-night highway travelers get honest, hot, high-quality fast food?"</em>
+          </p>
+
+          <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            Whether you’re heading back from Abbottabad or Islamabad on the GT Road, catching up with friends after university, or treating your family on the weekend, we provide comfortable air-conditioned seating, generous portion sizes, and service that treats you like family.
+          </p>
+
+          <!-- Highlights List -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-gray-300"><strong class="text-white">Dedicated Family Hall:</strong> Clean, comfortable, respectful dining ambiance for families.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-gray-300"><strong class="text-white">GT Road Car Takeaway:</strong> Call ahead on 0336-1131166 and have your hot food ready to pick up.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center shrink-0 mt-0.5">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <p class="text-xs sm:text-sm text-gray-300"><strong class="text-white">Open Late Every Single Night:</strong> Mon till 1:00 AM, Tue–Sun till 2:00 AM.</p>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="#location" class="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-amber-300 transition-colors">
+              <span>View Location on Map & Directions</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="reviews" class="py-20 bg-brand-darker border-y border-white/10 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-star"></i> Real Local Reviews
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white uppercase tracking-tight">
+            Loved By 623+ Haripur Diners
+          </h2>
+          <p class="text-gray-400 text-xs sm:text-sm mt-1">
+            Verified ratings from local regulars, students, and GT Road travelers.
+          </p>
+        </div>
+
+        <!-- Google Rating Badge -->
+        <a href="https://maps.google.com/?cid=5048793112688946254" target="_blank" class="inline-flex items-center gap-4 bg-brand-card p-3 sm:p-4 rounded-2xl border border-white/10 hover:border-amber-400/30 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center">
+            <img src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png" alt="Google" class="w-7 h-7">
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="text-2xl font-black text-white">4.4</span>
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+            <p class="text-[11px] text-gray-400">Based on 623+ Google reviews</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 flex flex-col justify-between hover:border-white/20 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400 text-xs gap-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-[10px] text-gray-500 uppercase tracking-wider">Local Guide</span>
+            </div>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed italic">
+              "The best pizza cheese pull in Haripur! We stopped by while driving from Abbottabad late at night. Food arrived piping hot within 18 minutes, and their Pistachio Sundae is an absolute gamechanger."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-red/30 text-brand-red font-bold text-sm flex items-center justify-center">
+              AK
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Ayesha Khan</p>
+              <p class="text-[11px] text-gray-500">Family Dine-In • Haripur</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 flex flex-col justify-between hover:border-white/20 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400 text-xs gap-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-[10px] text-gray-500 uppercase tracking-wider">Night Regular</span>
+            </div>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed italic">
+              "Crucial late-night spot on GT Road. It's tough finding quality food in Haripur past midnight, but Bella's is consistently open till 2 AM with crunchy zinger burgers and masala fries."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-amber-500/30 text-amber-400 font-bold text-sm flex items-center justify-center">
+              HA
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Hamza Abbasi</p>
+              <p class="text-[11px] text-gray-500">Late Night Takeaway</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 flex flex-col justify-between hover:border-white/20 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400 text-xs gap-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-[10px] text-gray-500 uppercase tracking-wider">Verified Diner</span>
+            </div>
+            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed italic">
+              "Very nice family atmosphere upstairs. Comfortable seating, polite staff, and reasonable prices compared to other fast-food places. My kids love their Strawberry Shake."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-emerald-500/30 text-emerald-400 font-bold text-sm flex items-center justify-center">
+              UT
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Usman Tariq</p>
+              <p class="text-[11px] text-gray-500">Family Dine-In</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-6 text-center">
+        <span class="text-[11px] text-gray-500 bg-brand-card px-3 py-1 rounded-full border border-white/5">[SAMPLE REVIEWS — Reflecting real 4.4 Google rating & local sentiments]</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="location" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-bold uppercase tracking-wider mb-3">
+          <i class="fa-solid fa-location-dot"></i> Find Bella's
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight uppercase">
+          Visit Us on Main GT Road
+        </h2>
+        <p class="text-gray-400 text-sm sm:text-base mt-2">
+          Akhtar Nawaz Khan Plaza, near Sabzi Mandi, opposite Nishat Mandi Mor, Darvesh, Haripur.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Operating Timings and Quick Info Cards -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Opening Hours Table Card -->
+          <div class="glass-card rounded-2xl p-6 border border-white/10 shadow-lg">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-clock text-amber-400"></i>
+                <h3 class="font-display text-lg font-bold text-white uppercase">Operating Hours</h3>
+              </div>
+              <span id="timingBadge" class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">
+                🟢 Live Status
+              </span>
+            </div>
+
+            <div class="mt-4 space-y-2.5 text-xs sm:text-sm">
+              <div id="day-mon" class="flex justify-between items-center py-2 px-2.5 rounded-lg transition-colors">
+                <span class="font-medium text-gray-300">Monday</span>
+                <span class="font-bold text-white">9:00 AM – 1:00 AM</span>
+              </div>
+              <div id="day-tue" class="flex justify-between items-center py-2 px-2.5 rounded-lg transition-colors">
+                <span class="font-medium text-gray-300">Tuesday</span>
+                <span class="font-bold text-white">9:00 AM – 2:00 AM</span>
+              </div>
+              <div id="day-wed" class="flex justify-between items-center py-2 px-2.5 rounded-lg transition-colors">
+                <span class="font-medium text-gray-300">Wednesday</span>
+                <span class="font-bold text-white">9:00 AM – 2:00 AM</span>
+              </div>
+              <div id="day-thu" class="flex justify-between items-center py-2 px-2.5 rounded-lg transition-colors">
+                <span class="font-medium text-gray-300">Thursday</span>
+                <span class="font-bold text-white">9:00 AM – 2:00 AM</span>
+              </div>
+              <div id="day-fri" class="flex justify-between items-center py-2 px-2.5 rounded-lg transition-colors">
+                <span class="font-medium text-gray-300">Friday (Peak Night)</span>
+                <span class="font-bold text-amber-400">9:00 AM – 2:00 AM</span>
+              </div>
+              <div id="day-sat" class="flex justify-between items-center py-2 px-2.5 rounded-lg transition-colors">
+                <span class="font-medium text-gray-300">Saturday (Weekend)</span>
+                <span class="font-bold text-amber-400">9:00 AM – 2:00 AM</span>
+              </div>
+              <div id="day-sun" class="flex justify-between items-center py-2 px-2.5 rounded-lg transition-colors">
+                <span class="font-medium text-gray-300">Sunday (Weekend)</span>
+                <span class="font-bold text-amber-400">9:00 AM – 2:00 AM</span>
+              </div>
+            </div>
+
+            <p class="text-[11px] text-gray-400 mt-4 pt-3 border-t border-white/5 flex items-center gap-1.5">
+              <i class="fa-solid fa-motorcycle text-brand-red"></i> Delivery & Takeaway orders accepted until 30 minutes before closing.
+            </p>
+          </div>
+
+          <!-- Quick Contact Actions -->
+          <div class="glass-card rounded-2xl p-6 border border-white/10 space-y-4">
+            <h3 class="font-display text-lg font-bold text-white uppercase">Direct Contact & Directions</h3>
+            
+            <div class="space-y-3">
+              <!-- Address Display & Copy Button -->
+              <div class="p-3 bg-brand-card rounded-xl border border-white/5 flex items-start justify-between gap-3">
+                <div class="text-xs">
+                  <span class="text-gray-400 font-bold block mb-0.5">Full Address:</span>
+                  <span class="text-gray-200">Main GT Road, Akthar Nawaz Khan Plaza, near Sabzi Mandi, opp. Nishat Mandi Mor, Darvesh, Haripur, 22600, Pakistan</span>
+                </div>
+                <button onclick="copyAddress()" class="shrink-0 p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all" title="Copy Address">
+                  <i class="fa-regular fa-copy" id="copyIcon"></i>
+                </button>
+              </div>
+
+              <!-- Phone Click-To-Call -->
+              <a href="tel:+923361131166" class="flex items-center justify-between p-3 bg-brand-card hover:bg-brand-cardBorder rounded-xl border border-white/5 transition-colors group">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-brand-red/20 text-brand-red flex items-center justify-center">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] text-gray-400 block">Phone Orders / Inquiries</span>
+                    <span class="text-sm font-bold text-white group-hover:text-brand-amber transition-colors">+92 336 1131166</span>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-brand-red">Call Now →</span>
+              </a>
+
+              <!-- Google Maps Directions Button -->
+              <a href="https://maps.google.com/?cid=5048793112688946254" target="_blank" class="flex items-center justify-between p-3 bg-brand-card hover:bg-brand-cardBorder rounded-xl border border-white/5 transition-colors group">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                    <i class="fa-solid fa-diamond-turn-right"></i>
+                  </div>
+                  <div>
+                    <span class="text-[11px] text-gray-400 block">Navigation</span>
+                    <span class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors">Open in Google Maps App</span>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-amber-400">Navigate →</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Interactive Map Container -->
+          <div class="glass-card rounded-2xl p-2 sm:p-3 border border-white/10 overflow-hidden shadow-2xl">
+            <div class="relative w-full h-[320px] sm:h-[380px] rounded-xl overflow-hidden bg-neutral-900">
+              <iframe 
+                title="Bella's Haripur Location Map"
+                src="https://maps.google.com/maps?q=33.9952275,72.9245735&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                class="w-full h-full border-0" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              <div class="absolute bottom-3 left-3 bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 text-[11px] text-gray-300">
+                <strong class="text-white">Bella's</strong> • 33.9952275, 72.9245735
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message / Feedback Form -->
+          <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10">
+            <div class="mb-5">
+              <h3 class="font-display text-xl font-bold text-white uppercase">Send a Quick Inquiry or Feedback</h3>
+              <p class="text-xs text-gray-400 mt-1">Have a catering request or message for Bella's management? We'd love to hear from you.</p>
+            </div>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-300 mb-1">Your Name</label>
+                  <input type="text" id="contactName" required placeholder="e.g. Asad Abbasi" class="w-full bg-brand-dark rounded-xl px-3.5 py-2.5 text-xs text-white border border-white/10 focus:border-brand-red focus:outline-none focus:ring-1 focus:ring-brand-red transition-all">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-300 mb-1">Phone Number</label>
+                  <input type="tel" id="contactPhone" required placeholder="e.g. 0300 1234567" class="w-full bg-brand-dark rounded-xl px-3.5 py-2.5 text-xs text-white border border-white/10 focus:border-brand-red focus:outline-none focus:ring-1 focus:ring-brand-red transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-gray-300 mb-1">Your Message or Feedback</label>
+                <textarea id="contactMessage" rows="3" required placeholder="Let us know how we can serve you better or plan your visit..." class="w-full bg-brand-dark rounded-xl px-3.5 py-2.5 text-xs text-white border border-white/10 focus:border-brand-red focus:outline-none focus:ring-1 focus:ring-brand-red transition-all"></textarea>
+              </div>
+
+              <div class="flex items-center justify-between pt-1">
+                <span class="text-[11px] text-gray-500">We respond promptly via phone or WhatsApp.</span>
+                <button type="submit" class="bg-gradient-to-r from-brand-red to-brand-crimson hover:from-brand-crimson hover:to-brand-red text-white px-6 py-2.5 rounded-xl text-xs font-bold transition-all shadow-glow-red flex items-center gap-2">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-paper-plane text-[10px]"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-brand-darker border-t border-white/10 pt-16 pb-12 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Brand Summary -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-2">
+            <div class="w-9 h-9 rounded-xl bg-brand-red text-white flex items-center justify-center font-display font-bold text-xl">B</div>
+            <span class="font-display font-extrabold text-2xl text-white tracking-wider">BELLA'S</span>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+            Haripur's prime fast-food destination for gourmet pizzas, crispy chicken burgers, loaded fries, and authentic homemade sundaes. Serving goodness late into the night on Main GT Road.
+          </p>
+          <div class="flex items-center space-x-3 text-gray-400 pt-2">
+            <a href="#" class="w-8 h-8 rounded-lg bg-brand-card hover:bg-brand-red hover:text-white border border-white/5 flex items-center justify-center transition-colors" aria-label="Facebook (Placeholder)">
+              <i class="fa-brands fa-facebook-f text-xs"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-brand-card hover:bg-brand-red hover:text-white border border-white/5 flex items-center justify-center transition-colors" aria-label="Instagram (Placeholder)">
+              <i class="fa-brands fa-instagram text-xs"></i>
+            </a>
+            <a href="https://maps.google.com/?cid=5048793112688946254" target="_blank" class="w-8 h-8 rounded-lg bg-brand-card hover:bg-brand-red hover:text-white border border-white/5 flex items-center justify-center transition-colors" aria-label="Google Maps">
+              <i class="fa-brands fa-google text-xs"></i>
+            </a>
+            <a href="https://wa.me/923361131166" target="_blank" class="w-8 h-8 rounded-lg bg-brand-card hover:bg-emerald-600 hover:text-white border border-white/5 flex items-center justify-center transition-colors" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-display text-white text-sm font-bold uppercase tracking-wider">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li><a href="#hero" class="hover:text-amber-400 transition-colors">Home</a></li>
+            <li><a href="#menu" class="hover:text-amber-400 transition-colors">Our Menu</a></li>
+            <li><a href="#desserts" class="hover:text-amber-400 transition-colors">Dessert Bar</a></li>
+            <li><a href="#about" class="hover:text-amber-400 transition-colors">Ambiance</a></li>
+            <li><a href="#reviews" class="hover:text-amber-400 transition-colors">Customer Reviews</a></li>
+            <li><a href="#location" class="hover:text-amber-400 transition-colors">Google Maps Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Opening Hours Summary -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display text-white text-sm font-bold uppercase tracking-wider">Kitchen Hours</h4>
+          <div class="text-xs text-gray-400 space-y-1.5">
+            <div class="flex justify-between">
+              <span>Monday:</span>
+              <span class="text-white font-medium">9:00 AM – 1:00 AM</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Tuesday – Sunday:</span>
+              <span class="text-amber-400 font-medium">9:00 AM – 2:00 AM</span>
+            </div>
+            <p class="text-[11px] text-gray-500 pt-2">Late night dine-in, car delivery, and takeaway service.</p>
+          </div>
+        </div>
+
+        <!-- Direct Contact Details -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display text-white text-sm font-bold uppercase tracking-wider">Get in Touch</h4>
+          <div class="text-xs text-gray-400 space-y-2">
+            <p class="flex items-start gap-2">
+              <i class="fa-solid fa-map-pin text-brand-red mt-0.5"></i>
+              <span>Akhtar Nawaz Khan Plaza, Main GT Road, near Sabzi Mandi, opp. Nishat Mandi Mor, Haripur</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-brand-red"></i>
+              <a href="tel:+923361131166" class="text-white font-bold hover:underline">+92 336 1131166</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <a href="https://wa.me/923361131166" target="_blank" class="text-emerald-400 hover:underline">0336 1131166 (Chat Orders)</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-3">
+        <p>© 2026 Bella's Haripur. All Rights Reserved.</p>
+        <p class="text-[11px] text-gray-400">
+          [SAMPLE DATA: Menu prices, food photos and social handles are sample templates for business launch]
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-brand-card/95 backdrop-blur-md border-t border-white/10 px-4 py-2 flex items-center justify-around shadow-2xl">
+    <a href="tel:+923361131166" class="flex flex-col items-center text-gray-300 hover:text-white py-1">
+      <i class="fa-solid fa-phone text-brand-red text-base"></i>
+      <span class="text-[10px] font-bold mt-1">Call</span>
+    </a>
+
+    <a href="#menu" class="flex flex-col items-center text-gray-300 hover:text-white py-1">
+      <i class="fa-solid fa-utensils text-amber-400 text-base"></i>
+      <span class="text-[10px] font-bold mt-1">Menu</span>
+    </a>
+
+    <button onclick="toggleCartDrawer(true)" class="relative flex flex-col items-center text-gray-300 hover:text-white py-1">
+      <div class="relative">
+        <i class="fa-solid fa-cart-shopping text-brand-red text-base"></i>
+        <span id="mobileBottomCartBadge" class="absolute -top-1.5 -right-2.5 w-4 h-4 rounded-full bg-brand-red text-white text-[9px] font-black flex items-center justify-center">0</span>
+      </div>
+      <span class="text-[10px] font-bold mt-1">My Tray</span>
+    </button>
+
+    <a href="https://maps.google.com/?cid=5048793112688946254" target="_blank" class="flex flex-col items-center text-gray-300 hover:text-white py-1">
+      <i class="fa-solid fa-location-arrow text-blue-400 text-base"></i>
+      <span class="text-[10px] font-bold mt-1">Directions</span>
+    </a>
+
+    <a href="https://wa.me/923361131166?text=Hi%20Bella's%20Haripur,%20I'd%20like%20to%20order!" target="_blank" class="flex flex-col items-center text-emerald-400 py-1 font-bold">
+      <i class="fa-brands fa-whatsapp text-lg"></i>
+      <span class="text-[10px] mt-0.5">WhatsApp</span>
+    </a>
+  </div>
+
+  <div class="fixed bottom-20 right-4 lg:bottom-6 lg:right-6 z-40">
+    <a href="https://wa.me/923361131166?text=Hi%20Bella's%20Haripur,%20I'd%20like%20to%20place%20an%20order!" target="_blank" class="group relative flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl hover:scale-110 active:scale-95 transition-all duration-300" aria-label="Order on WhatsApp">
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+      <!-- Pulsing Ring -->
+      <span class="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-25"></span>
+      <!-- Hover Tooltip -->
+      <span class="hidden md:group-hover:inline-block absolute right-16 whitespace-nowrap bg-black/90 text-white text-xs font-bold px-3 py-1.5 rounded-xl border border-white/10 shadow-lg">
+        Order on WhatsApp 📲
+      </span>
+    </a>
+  </div>
+
+  <div id="cartDrawerBackdrop" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  
+  <div id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-brand-dark z-50 border-l border-white/10 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300">
+    
+    <!-- Drawer Header -->
+    <div class="p-4 sm:p-5 border-b border-white/10 flex items-center justify-between bg-brand-darker">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-brand-red text-white flex items-center justify-center font-bold text-sm">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-white text-base uppercase">Your Food Tray</h3>
+          <p class="text-[11px] text-gray-400">Direct instant checkout via WhatsApp</p>
+        </div>
+      </div>
+      <button onclick="toggleCartDrawer(false)" class="text-gray-400 hover:text-white p-2 rounded-lg text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto p-4 space-y-3" id="cartItemList">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <!-- Order Customization & WhatsApp Sender Form -->
+    <div class="p-4 sm:p-5 border-t border-white/10 bg-brand-darker space-y-3">
+      
+      <!-- Order Type Switcher -->
+      <div class="grid grid-cols-2 gap-2 text-xs font-bold">
+        <button id="btnTakeaway" onclick="setOrderType('Takeaway / Dine-in')" class="py-2 rounded-xl bg-brand-red text-white border border-brand-red transition-all">
+          <i class="fa-solid fa-utensils mr-1"></i> Takeaway / Dine-in
+        </button>
+        <button id="btnDelivery" onclick="setOrderType('Home Delivery')" class="py-2 rounded-xl bg-brand-card text-gray-300 border border-white/5 transition-all">
+          <i class="fa-solid fa-motorcycle mr-1"></i> Haripur Delivery
+        </button>
+      </div>
+
+      <!-- Customer Details Input -->
+      <div class="space-y-2">
+        <input type="text" id="orderCustName" placeholder="Your Name (e.g. Bilal)" class="w-full bg-brand-dark rounded-xl px-3 py-2 text-xs text-white border border-white/10 focus:border-brand-red focus:outline-none">
+        <input type="text" id="orderCustNote" placeholder="Address / Table # / Spice Level" class="w-full bg-brand-dark rounded-xl px-3 py-2 text-xs text-white border border-white/10 focus:border-brand-red focus:outline-none">
+      </div>
+
+      <!-- Pricing Summary -->
+      <div class="pt-2 border-t border-white/10 space-y-1 text-xs">
+        <div class="flex justify-between text-gray-400">
+          <span>Items Subtotal:</span>
+          <span id="cartSubtotal" class="font-bold text-white">PKR 0</span>
+        </div>
+        <div class="flex justify-between text-gray-400">
+          <span>Delivery / Packaging:</span>
+          <span class="text-emerald-400 font-bold">Standard Rates</span>
+        </div>
+        <div class="flex justify-between text-sm font-black text-white pt-1">
+          <span>Estimated Total:</span>
+          <span id="cartTotal" class="text-brand-amber">PKR 0</span>
+        </div>
+      </div>
+
+      <!-- Send to WhatsApp Button -->
+      <button onclick="sendOrderToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:shadow-emerald-600/30 transition-all active:scale-98">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Send Order to WhatsApp (+92 336 1131166)</span>
+      </button>
+
+      <p class="text-[10px] text-gray-400 text-center">
+        Opens WhatsApp with your items pre-formatted for confirmation.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="toastNotification" class="fixed top-20 right-4 z-50 transform translate-y-[-150%] opacity-0 transition-all duration-300 bg-brand-card border border-white/20 text-white px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 max-w-sm pointer-events-none">
+    <div id="toastIcon" class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm shrink-0">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div>
+      <p id="toastTitle" class="text-xs font-bold text-white">Notification</p>
+      <p id="toastMessage" class="text-[11px] text-gray-300">Message description here</p>
+    </div>
+  </div>
+
+  <script>
+    // Backend API Base URL
+    const API_URL = "http://127.0.0.1:8000/api";
+
+    // State management for Cart
+    let cart = [];
+    let orderType = 'Takeaway / Dine-in';
+
+    function updateLiveStatus() {
+      // Calculate current Pakistan Standard Time (PKT is UTC +5)
+      const now = new Date();
+      const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const pktTime = new Date(utcTime + (3600000 * 5));
+
+      const day = pktTime.getDay(); // 0 is Sunday, 1 is Monday, etc.
+      const hours = pktTime.getHours();
+      const minutes = pktTime.getMinutes();
+      const timeInDec = hours + (minutes / 60);
+
+      // Schedule:
+      // Mon (1): 9:00 AM to 1:00 AM (next day, i.e. 25:00 or 1.0)
+      // Tue-Sun (2,3,4,5,6,0): 9:00 AM to 2:00 AM (next day, i.e. 26:00 or 2.0)
+      let isOpen = false;
+
+      // Check current day or late night carry over from previous day
+      if (hours >= 9) {
+        // Evening / day time
+        isOpen = true;
+      } else if (hours < 1) {
+        // Between 12:00 AM and 1:00 AM: open everyday
+        isOpen = true;
+      } else if (hours < 2) {
+        // Between 1:00 AM and 2:00 AM: open on Tue-Sun nights (which means Monday night closed at 1 AM)
+        // If yesterday was Monday (day 1), it closed at 1am.
+        const prevDay = (day === 0) ? 6 : day - 1;
+        if (prevDay !== 1) {
+          isOpen = true;
+        }
+      }
+
+      // Update Live UI Badges
+      const ticker = document.getElementById('liveStatusTicker');
+      const heroBadge = document.getElementById('heroOpenBadge');
+      const timingBadge = document.getElementById('timingBadge');
+
+      if (isOpen) {
+        const closeTime = (day === 1 && hours >= 9) ? '1:00 AM' : '2:00 AM';
+        if (ticker) ticker.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Open Now • Serving till ${closeTime}`;
+        if (heroBadge) {
+          heroBadge.className = 'inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-emerald-950/80 border border-emerald-500/40 text-emerald-400';
+          heroBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> <span>OPEN NOW • SERVING TILL ${closeTime}</span>`;
+        }
+        if (timingBadge) {
+          timingBadge.className = 'text-xs px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30';
+          timingBadge.innerText = '🟢 Kitchen Open Now';
+        }
+      } else {
+        if (ticker) ticker.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400"></span> Closed Now • Opens at 9:00 AM`;
+        if (heroBadge) {
+          heroBadge.className = 'inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-amber-950/80 border border-amber-500/40 text-amber-400';
+          heroBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400"></span> <span>OPENS TODAY AT 9:00 AM</span>`;
+        }
+        if (timingBadge) {
+          timingBadge.className = 'text-xs px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30';
+          timingBadge.innerText = '🟡 Opens at 9:00 AM';
+        }
+      }
+
+      // Highlight active day in opening hours table
+      const dayMap = ['day-sun', 'day-mon', 'day-tue', 'day-wed', 'day-thu', 'day-fri', 'day-sat'];
+      const todayId = dayMap[day];
+      const todayEl = document.getElementById(todayId);
+      if (todayEl) {
+        todayEl.classList.add('bg-white/10', 'border', 'border-brand-red/30');
+      }
+    }
+
+    function filterMenu(category) {
+      const cards = document.querySelectorAll('.menu-item-card');
+      const buttons = document.querySelectorAll('.menu-tab-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.className = 'menu-tab-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-brand-red text-white shadow-glow-red';
+        } else {
+          btn.className = 'menu-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap bg-brand-card hover:bg-brand-cardBorder text-gray-300 hover:text-white border border-white/5';
+        }
+      });
+
+      cards.forEach(card => {
+        const itemCat = card.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function addToCart(title, price, category) {
+      const existing = cart.find(item => item.title === title);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ title, price, quantity: 1, category });
+      }
+      updateCartUI();
+      showToast('Added to Tray!', `${title} (PKR ${price})`, 'success');
+    }
+
+    function changeQuantity(index, delta) {
+      if (cart[index]) {
+        cart[index].quantity += delta;
+        if (cart[index].quantity <= 0) {
+          cart.splice(index, 1);
+        }
+      }
+      updateCartUI();
+    }
+
+    function setOrderType(type) {
+      orderType = type;
+      const btnTakeaway = document.getElementById('btnTakeaway');
+      const btnDelivery = document.getElementById('btnDelivery');
+
+      if (type === 'Takeaway / Dine-in') {
+        btnTakeaway.className = 'py-2 rounded-xl bg-brand-red text-white border border-brand-red transition-all';
+        btnDelivery.className = 'py-2 rounded-xl bg-brand-card text-gray-300 border border-white/5 transition-all';
+      } else {
+        btnDelivery.className = 'py-2 rounded-xl bg-brand-red text-white border border-brand-red transition-all';
+        btnTakeaway.className = 'py-2 rounded-xl bg-brand-card text-gray-300 border border-white/5 transition-all';
+      }
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      // Badges
+      const countEl = document.getElementById('headerCartCount');
+      const mobileBadgeEl = document.getElementById('mobileBottomCartBadge');
+      if (countEl) countEl.innerText = totalCount;
+      if (mobileBadgeEl) mobileBadgeEl.innerText = totalCount;
+
+      // Totals
+      const subtotalEl = document.getElementById('cartSubtotal');
+      const totalEl = document.getElementById('cartTotal');
+      if (subtotalEl) subtotalEl.innerText = `PKR ${subtotal.toLocaleString()}`;
+      if (totalEl) totalEl.innerText = `PKR ${subtotal.toLocaleString()}`;
+
+      // List container
+      const listEl = document.getElementById('cartItemList');
+      if (!listEl) return;
+
+      if (cart.length === 0) {
+        listEl.innerHTML = `
+          <div class="h-64 flex flex-col items-center justify-center text-center p-6 text-gray-500 space-y-2">
+            <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-2xl text-gray-600 mb-2">
+              <i class="fa-solid fa-burger"></i>
+            </div>
+            <p class="text-sm font-bold text-gray-300">Your Tray is Empty</p>
+            <p class="text-xs max-w-xs">Explore our pizzas, crispy crunch burgers & famous sundaes to build your order!</p>
+          </div>
+        `;
+        return;
+      }
+
+      listEl.innerHTML = cart.map((item, index) => `
+        <div class="bg-brand-card border border-white/5 rounded-xl p-3 flex items-center justify-between gap-3">
+          <div class="flex-1 min-w-0">
+            <p class="text-xs font-bold text-white truncate">${item.title}</p>
+            <p class="text-[11px] text-amber-400 font-semibold">PKR ${item.price} × ${item.quantity} = PKR ${(item.price * item.quantity).toLocaleString()}</p>
+          </div>
+          <div class="flex items-center gap-1.5 bg-black/40 px-2 py-1 rounded-lg border border-white/10 shrink-0">
+            <button onclick="changeQuantity(${index}, -1)" class="w-5 h-5 flex items-center justify-center text-gray-400 hover:text-white text-xs">
+              <i class="fa-solid fa-minus text-[10px]"></i>
+            </button>
+            <span class="text-xs font-bold text-white px-1">${item.quantity}</span>
+            <button onclick="changeQuantity(${index}, 1)" class="w-5 h-5 flex items-center justify-center text-gray-400 hover:text-white text-xs">
+              <i class="fa-solid fa-plus text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function sendOrderToWhatsApp() {
+      if (cart.length === 0) {
+        showToast('Empty Tray', 'Please add at least one dish to order!', 'info');
+        return;
+      }
+
+      const custName = document.getElementById('orderCustName').value.trim() || 'Valued Customer';
+      const custNote = document.getElementById('orderCustNote').value.trim() || 'Standard preparation';
+      const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      let orderRef = "Direct";
+
+      // Save order in Backend SQLite Database
+      try {
+        const response = await fetch(`${API_URL}/orders`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            customer_name: custName,
+            order_type: orderType,
+            notes_or_address: custNote,
+            items: cart,
+            total_amount: totalAmount
+          })
+        });
+
+        if (response.ok) {
+          const resData = await response.json();
+          orderRef = resData.order_id;
+        }
+      } catch (error) {
+        console.warn("Backend offline, proceeding with WhatsApp:", error);
+      }
+
+      // Build structured order message with Order Reference ID
+      let msg = `*NEW ORDER FOR BELLA'S HARIPUR*\n`;
+      msg += `*Order ID:* ${orderRef}\n`;
+      msg += `------------------------------------\n`;
+      msg += `*Customer:* ${custName}\n`;
+      msg += `*Order Type:* ${orderType}\n`;
+      msg += `*Notes/Address:* ${custNote}\n`;
+      msg += `------------------------------------\n`;
+      msg += `*ITEMS ORDERED:*\n`;
+
+      cart.forEach((item, i) => {
+        msg += `${i + 1}. ${item.title} × ${item.quantity} — PKR ${(item.price * item.quantity).toLocaleString()}\n`;
+      });
+
+      msg += `------------------------------------\n`;
+      msg += `*Total Estimate:* PKR ${totalAmount.toLocaleString()}\n`;
+      msg += `*Location:* Main GT Road, Haripur\n`;
+      msg += `Please confirm order status and estimated time. Thank you!`;
+
+      const encodedMsg = encodeURIComponent(msg);
+      const waUrl = `https://wa.me/923361131166?text=${encodedMsg}`;
+      window.open(waUrl, '_blank');
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartDrawerBackdrop');
+      if (open) {
+        backdrop.classList.remove('hidden');
+        setTimeout(() => drawer.classList.remove('translate-x-full'), 10);
+      } else {
+        drawer.classList.add('translate-x-full');
+        setTimeout(() => backdrop.classList.add('hidden'), 300);
+      }
+    }
+
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobileNavMenu');
+      const icon = document.getElementById('menuHamburgerIcon');
+      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars';
+      } else {
+        icon.className = 'fa-solid fa-xmark';
+      }
+    }
+
+    function copyAddress() {
+      const address = "Main GT Road, Akthar Nawaz Khan Plaza, near Sabzi Mandi, opposite Nishat Mandi Mor, Darvesh, Haripur, 22600, Pakistan";
+      
+      // Fallback copy without restricted clipboard API
+      const tempInput = document.createElement("textarea");
+      tempInput.value = address;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+
+      const icon = document.getElementById('copyIcon');
+      if (icon) {
+        icon.className = 'fa-solid fa-check text-emerald-400';
+        setTimeout(() => { icon.className = 'fa-regular fa-copy'; }, 2000);
+      }
+      showToast('Address Copied!', 'Pasted to clipboard. Open in navigation app.', 'success');
+    }
+
+    // Contact Form Handler with Backend Sync
+    async function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const phone = document.getElementById('contactPhone').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+
+      try {
+        const response = await fetch(`${API_URL}/contact`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, phone, message })
+        });
+
+        if (response.ok) {
+          showToast(`Thank You, ${name}!`, "Your message has been sent to Bella's team.", 'success');
+          document.getElementById('contactForm').reset();
+        } else {
+          showToast('Notice', "Could not save message. Please call 0336-1131166.", 'info');
+        }
+      } catch (error) {
+        showToast(`Thank You, ${name}!`, "Message noted. We will call you soon.", 'success');
+        document.getElementById('contactForm').reset();
+      }
+    }
+
+    // Non-intrusive Toast Feedback
+    function showToast(title, message, type) {
+      const toast = document.getElementById('toastNotification');
+      const titleEl = document.getElementById('toastTitle');
+      const msgEl = document.getElementById('toastMessage');
+      const iconEl = document.getElementById('toastIcon');
+
+      titleEl.innerText = title;
+      msgEl.innerText = message;
+
+      if (type === 'success') {
+        iconEl.className = 'w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm shrink-0';
+        iconEl.innerHTML = '<i class="fa-solid fa-check"></i>';
+      } else {
+        iconEl.className = 'w-7 h-7 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center text-sm shrink-0';
+        iconEl.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i>';
+      }
+
+      toast.classList.remove('translate-y-[-150%]', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-[-150%]', 'opacity-0');
+      }, 3500);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      updateLiveStatus();
+      updateCartUI();
+      // Recheck status every 60 seconds
+      setInterval(updateLiveStatus, 60000);
+    });
+  </script>
+
+</body>
+</html>
